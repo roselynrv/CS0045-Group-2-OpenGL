@@ -81,6 +81,22 @@ void drawStarterTriangle()
 }
 
 // ------------------------------------------------------------
+// ADDITIONAL OBJECT 2 (Member 2)
+// A blue square drawn with GL_QUADS
+// ------------------------------------------------------------
+void drawObject2()
+{
+    glColor3f(0.1f, 0.3f, 1.0f);   // blue
+
+    glBegin(GL_QUADS);
+        glVertex2f(-0.90f,  0.20f);  // top-left
+        glVertex2f(-0.65f,  0.20f);  // top-right
+        glVertex2f(-0.65f, -0.05f);  // bottom-right
+        glVertex2f(-0.90f, -0.05f);  // bottom-left
+    glEnd();
+}
+
+// ------------------------------------------------------------
 // DISPLAY CALLBACK
 // ------------------------------------------------------------
 void display()
@@ -89,6 +105,7 @@ void display()
 
     // Already completed:
     drawStarterTriangle();
+    drawObject2();      // Member 2
 
     /*
     ============================================================
