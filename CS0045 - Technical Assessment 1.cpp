@@ -71,16 +71,20 @@ void drawStarterTriangle()
 
     glColor3f(0.0f, 0.8f, 0.2f);
 
-    glBegin(GL_TRIANGLES);
+    GLfloat vertices[] = {
 
-        glVertex2f(0.0f,  0.60f);
-        glVertex2f(-0.60f, -0.40f);
-        glVertex2f(0.60f, -0.40f);
+        0.0f,  0.80f,
+        -0.30f, 0.30f,
+        0.30f, 0.30f
+    };
 
-    glEnd();
+    glEnableClientState(GL_VERTEX_ARRAY);
+    glVertexPointer(2, GL_FLOAT, 0, vertices);
+    glDrawArrays(GL_TRIANGLES, 0, 3);
+    glDisableClientState(GL_VERTEX_ARRAY);
 }
 
-// ------------------------------------------------------------
+// -------------------B-----------------------------------------
 // ADDITIONAL OBJECT 2 (Member 2)
 // A blue square drawn with GL_QUADS
 // ------------------------------------------------------------
