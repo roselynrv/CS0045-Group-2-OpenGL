@@ -3,22 +3,19 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "type": "cppbuild",
             "label": "Build OpenGL program with FreeGLUT",
-            "command": "C:/msys64/ucrt64/bin/g++.exe",
+            "type": "shell",
+            "command": "C:\\msys64\\ucrt64\\bin\\g++.exe",
             "args": [
-                "-fdiagnostics-color=always",
                 "-g",
+                "-std=c++17",
                 "${file}",
                 "-o",
-                "${fileDirname}/${fileBasenameNoExtension}.exe",
-                "-I",
-                "C:/msys64/ucrt64/include",
-                "-L",
-                "C:/msys64/ucrt64/lib",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe",
                 "-lfreeglut",
                 "-lglu32",
-                "-lopengl32"
+                "-lopengl32",
+                "lglew32"
             ],
             "options": {
                 "cwd": "${fileDirname}"
@@ -27,8 +24,7 @@
             "group": {
                 "kind": "build",
                 "isDefault": true
-            },
-            "detail": "Build OpenGL program with FreeGLUT"
+            }
         }
     ]
 }
