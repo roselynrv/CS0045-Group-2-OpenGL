@@ -84,7 +84,6 @@ void drawStarterTriangle()
     glDisableClientState(GL_VERTEX_ARRAY);
 }
 
-// -------------------B-----------------------------------------
 // ADDITIONAL OBJECT 2 (Member 2)
 // A blue square drawn with GL_QUADS
 // ------------------------------------------------------------
