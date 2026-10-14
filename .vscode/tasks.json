@@ -1,9 +1,8 @@
-
 {
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Build OpenGL program with FreeGLUT",
+            "label": "Build active C++ file with FreeGLUT",
             "type": "shell",
             "command": "C:\\msys64\\ucrt64\\bin\\g++.exe",
             "args": [
@@ -13,14 +12,15 @@
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe",
                 "-lfreeglut",
-                "-lglu32",
                 "-lopengl32",
-                "lglew32"
+                "-lglu32"
             ],
             "options": {
                 "cwd": "${fileDirname}"
             },
-            "problemMatcher": "$gcc",
+            "problemMatcher": [
+                "$gcc"
+            ],
             "group": {
                 "kind": "build",
                 "isDefault": true
